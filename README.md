@@ -113,9 +113,9 @@ pip install -r requirements.txt
  ```
 
 ## Principais dependências:
-- fastapi: Framework para construção da API.
-- uvicorn: Servidor ASGI para executar a aplicação FastAPI.
-- tensorflow: Biblioteca para construção e treinamento do modelo LSTM.
-- yfinance: Biblioteca para download de dados históricos de ações.
-- pandas: Biblioteca para manipulação de dados.
-- sklearn: Biblioteca para métricas e pré-processamento de dados.
+- **fastapi**: Framework para construção da API.
+- **uvicorn**: Servidor ASGI para executar a aplicação FastAPI.
+- **tensorflow**: Biblioteca para construção e treinamento do modelo LSTM.
+- **yfinance**: Biblioteca para download de dados históricos de ações.
+- **pandas**: Biblioteca para manipulação de dados.
+- **sklearn**: Biblioteca para métricas e pré-processamento de dados.

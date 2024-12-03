@@ -44,9 +44,35 @@ A API é construída com o **FastAPI** e possui os seguintes endpoints:
 
 ## Como Executar
 
+
 ### 1. Instale as dependências:
 Crie um ambiente virtual (opcional, mas recomendado):
 
 ```bash
+
 python -m venv venv
 source venv/bin/activate  # Para Windows, use `venv\Scripts\activate`
+```
+
+### Instale as dependências:
+
+```bash
+Copiar código
+pip install -r requirements.txt
+```
+
+### 2. Inicie o servidor FastAPI:
+Execute o seguinte comando para rodar a aplicação:
+
+```bash
+Copiar código
+uvicorn app.main:app --reload
+```
+
+### 3. Acesse a documentação da API:
+Depois de iniciar o servidor, você pode acessar a documentação interativa da API em:
+
+```arduino
+Copiar código
+http://127.0.0.1:8000/docs
+```

@@ -57,7 +57,6 @@ source venv/bin/activate  # Para Windows, use `venv\Scripts\activate`
 ### Instale as dependências:
 
 ```bash
-Copiar código
 pip install -r requirements.txt
 ```
 
@@ -65,7 +64,6 @@ pip install -r requirements.txt
 Execute o seguinte comando para rodar a aplicação:
 
 ```bash
-Copiar código
 uvicorn app.main:app --reload
 ```
 
@@ -73,6 +71,51 @@ uvicorn app.main:app --reload
 Depois de iniciar o servidor, você pode acessar a documentação interativa da API em:
 
 ```arduino
-Copiar código
 http://127.0.0.1:8000/docs
 ```
+### 4. Teste os endpoints:
+Use o Postman ou cURL para interagir com a API e testar os endpoints.
+
+## Exemplo de Requisições
+
+### 1. Obter dados de ações
+Requisição POST para /get_stock_data/:
+
+```bash
+
+curl -X POST http://127.0.0.1:8000/get_stock_data/ \
+  -H "Content-Type: application/json" \
+  -d '{"symbol": "DIS", "start_date": "2018-01-01", "end_date": "2024-07-20"}'
+  ```
+### 2. Treinar o modelo
+Requisição POST para /train_model/:
+
+ ```bash
+curl -X POST http://127.0.0.1:8000/train_model/ \
+  -H "Content-Type: application/json" \
+  -d '{"symbol": "DIS", "start_date": "2018-01-01", "end_date": "2024-07-20"}'
+   ```
+
+### 3. Fazer previsões
+Requisição POST para /predict/:
+
+ ```bash
+curl -X POST http://127.0.0.1:8000/predict/ \
+  -H "Content-Type: application/json" \
+  -d '{"symbol": "DIS", "start_date": "2024-01-01", "end_date": "2024-07-20"}'
+   ```
+
+## Dependências
+As dependências do projeto são listadas no arquivo requirements.txt e podem ser instaladas com o comando:   
+
+ ```bash
+pip install -r requirements.txt
+ ```
+
+## Principais dependências:
+- fastapi: Framework para construção da API.
+- uvicorn: Servidor ASGI para executar a aplicação FastAPI.
+- tensorflow: Biblioteca para construção e treinamento do modelo LSTM.
+- yfinance: Biblioteca para download de dados históricos de ações.
+- pandas: Biblioteca para manipulação de dados.
+- sklearn: Biblioteca para métricas e pré-processamento de dados.
